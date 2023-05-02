@@ -16,6 +16,7 @@ public class User {
 
 	private String fullName;
 	private String email;
+	private String  mobileNumber;
 	private String address;
 	private String qualification;
 	private String password;
@@ -25,14 +26,19 @@ public class User {
 	public User() {
 	}
 
-	public User(String fullName, String email, String address, String qualification, String password) {
-
+	public User(String fullName, String email, String mobileNumber, String address, String qualification,
+			String password, String role) {
+		super();
 		this.fullName = fullName;
 		this.email = email;
+		this.mobileNumber = mobileNumber;
 		this.address = address;
 		this.qualification = qualification;
 		this.password = password;
+		this.role = role;
 	}
+
+
 
 	public long getId() {
 		return id;
@@ -82,6 +88,14 @@ public class User {
 		this.password = password;
 	}
 
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
 	public String getRole() {
 		return role;
 	}
@@ -92,7 +106,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", fullName=" + fullName + ", email=" + email + ", address=" + address
-				+ ", qualification=" + qualification + ", password=" + password + "]";
+		return "User [id=" + id + ", fullName=" + fullName + ", email=" + email + ", mobileNumber=" + mobileNumber
+				+ ", address=" + address + ", qualification=" + qualification + ", password=" + password + ", role="
+				+ role + "]";
 	}
+
 }
